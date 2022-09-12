@@ -8,7 +8,6 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-     
         <Message hello={hello} name={text} />
       </header>
     </div>
