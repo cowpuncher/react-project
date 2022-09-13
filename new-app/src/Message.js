@@ -1,7 +1,14 @@
 import React from 'react';
 
+
+
 function Message(props) {
-    return <h1>{props.hello} {props.name}</h1>;
+    return (
+        <div className="message">
+            <span>Author: {props.name}</span>
+            <p>{props.message}</p>
+        </div>
+    );
 }
 
 export default Message;
