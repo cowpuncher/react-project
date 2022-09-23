@@ -31,6 +31,8 @@ function App(props) {
         }
     };
 
+
+    // Добавляем сообщение
     const addMessage = (mess, name) => {
         if(mess != '') {
             newMessage = {
@@ -43,13 +45,24 @@ function App(props) {
 
     };
 
+    const robotMessage = () => {
+        setMessageList([...messageList, {
+            name: 'Robot',
+            text: "Thank's"
+        }]);
+    };
+
     const robotText = (count) => {
         return 'Thanks ' + count;
-    }
+    };
 
-    useEffect(() => {
+    //useEffect(() => {
+     //  setTimeout(() => {
 
-    });
+     //      console.log(robotMessage);
+          // robotMessage();
+    //  }, 1500)
+    //}, [messageList]);
 
     return (
         <div className="App">
