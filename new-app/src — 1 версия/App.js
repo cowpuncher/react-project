@@ -1,6 +1,6 @@
+import HelloText from './HelloText';
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import HelloText from './HelloText';
 import FormReg from "./FormReg";
 import Message from "./Message";
 
@@ -46,12 +46,10 @@ function App(props) {
     };
 
     // const robotMessage = () => {
-    //    if(messageList.hasOwnProperty(name)) {
-    //        setMessageList([...messageList, {
-    //            title: 'Robot',
-    //            text: "Thank's"
-    //        }]);
-    //    }
+    //     setMessageList([...messageList, {
+    //         name: 'Robot',
+    //         text: "Thank's"
+    //     }]);
     // };
 
     const robotText = (count) => {
@@ -59,10 +57,10 @@ function App(props) {
     };
 
     //useEffect(() => {
-    //   setTimeout(() => {
-//
-    //      console.log(robotMessage);
-    //      robotMessage();
+     //  setTimeout(() => {
+
+     //      console.log(robotMessage);
+          // robotMessage();
     //  }, 1500)
     //}, [messageList]);
 
