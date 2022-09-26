@@ -1,0 +1,154 @@
+/*Specification*/
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: -webkit-linear-gradient(330deg, #17bebb, #f0a6ca);
+  background: -moz-linear-gradient(330deg, #17bebb, #f0a6ca);
+  background: -o-linear-gradient(330deg, #17bebb, #f0a6ca);
+  background: linear-gradient(120deg, #17bebb, #f0a6ca);
+  height: 100vh;
+}
+
+.enterForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.chatbox {
+  padding: 25px;
+  color: #ffffff;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.05);
+  width: 600px;
+  height: auto;
+  -webkit-border-radius: 0.2em;
+     -moz-border-radius: 0.2em;
+          border-radius: 0.2em;
+  position: relative;
+  -webkit-box-shadow: 1px 1px 12px rgb(0 0 0 / 10%);
+     -moz-box-shadow: 1px 1px 12px rgb(0 0 0 / 10%);
+          box-shadow: 1px 1px 12px rgb(0 0 0 / 10%);
+}
+.mainScreen a {
+  text-align: left;
+  font-size: 15px;
+  font-weight: 300;
+  color: #FFF;
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: block;
+}
+.input,
+input.inputAddMessage {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 1em 15px;
+    height: auto;
+    width: 100%;
+    -webkit-border-radius: 5px;
+       -moz-border-radius: 5px;
+            border-radius: 5px;
+    overflow: auto;
+    outline: none;
+    -webkit-box-shadow: none;
+       -moz-box-shadow: none;
+            box-shadow: none;
+    border: 0;
+   
+}
+.input {
+  margin-bottom: 15px;
+}
+.input::placeholder {
+  color: #ffffff;
+}
+.button {
+  cursor: pointer;
+  width: 100%;
+  background: #e9a6c9;
+  color: #fff;
+  padding: 0.8rem;
+  border-radius: 5px;
+  border: 0;
+}
+
+.chatbox__user-list {
+  background: rgba(255, 255, 255, 0.1);
+  width: 25%;
+  color: #fff;
+  padding: 0 35px 35px 35px;
+  height: 100vh;
+  width: 300px;
+  min-width: 300px;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+.messageBlock {
+  width: 100%;
+}
+.mainScreen {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+
+.messageList {
+  height: 94.5%;
+  padding: 15px;
+}
+
+form.formAddMessage {
+  height: 5%;
+  padding: 5px;
+  position: relative;
+}
+
+button.btnAddMessage {
+  height: 42px;
+  position: absolute;
+  right: 5px;
+  background: #32c5c2;
+  color: #fff;
+  border: 0;
+  border-radius: 0 5px 5px 0;
+  padding: 0 30px;
+  cursor: pointer;
+}
+
+button.exitBtn {
+  background: #eba7ca;
+  color: #fff;
+  border: 0;
+  padding: 5px 15px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+a.profile {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.topPanel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0 0 0;
+}
+
+button.addChat {
+  /* margin-top: auto; */
+  background: transparent;
+  border: 0;
+  color: #fff;
+  margin-left: auto;
+  cursor: pointer;
+}

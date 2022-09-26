@@ -45,54 +45,53 @@ function App(props) {
 
     };
 
-    // const robotMessage = () => {
-    //    if(messageList.hasOwnProperty(name)) {
-    //        setMessageList([...messageList, {
-    //            title: 'Robot',
-    //            text: "Thank's"
-    //        }]);
-    //    }
-    // };
+    const robotMessage = () => {
+       if(messageList.hasOwnProperty(name)) {
+           
+       }
+        // setMessageList([...messageList, {
+        //     title: 'Robot',
+        //     text: "Thank's"
+        // }]);
+    };
 
     const robotText = (count) => {
         return 'Thanks ' + count;
     };
 
-    //useEffect(() => {
-    //   setTimeout(() => {
-//
-    //      console.log(robotMessage);
-    //      robotMessage();
-    //  }, 1500)
-    //}, [messageList]);
+    useEffect(() => {
+        setTimeout(() => {
+            robotMessage();
+        }, 1500)
+    }, [messageList]);
 
     return (
         <div className="App">
-                <FormReg elem={elem} input={input} handleChange={handleChange} addName={addName}/>
-                <header className="App-header">
-                    {name === input ? (
-                        <div className="messagesList">
-                            <h1 className="product-sold-out">Welcome, {name}</h1>
-                            <div className="formMessage">
-                                <form>
-                                    <textarea value={message} onChange={(event)=>setMessage(message = event.target.value)}/>
-                                    <button type="button" onClick={() => addMessage(message, name)} >Send</button>
-                                </form>
-                            </div>
-                            {
-                                messageList.map((item , index) => {
-                                    return <Message key={index} name={item.name} message={item.text}/>
-                                })
-                            }
-                            {
-                                robotText(messageList.length)
-                            }
-
+            <FormReg elem={elem} input={input} handleChange={handleChange} addName={addName}/>
+            <header className="App-header">
+                {name === input ? (
+                    <div className="messagesList">
+                        <h1 className="product-sold-out">Welcome, {name}</h1>
+                        <div className="formMessage">
+                            <form>
+                                <textarea value={message} onChange={(event)=>setMessage(message = event.target.value)}/>
+                                <button type="button" onClick={() => addMessage(message, name)} >Send</button>
+                            </form>
                         </div>
-                    ) : (
-                        <HelloText hello={name} message={messageList} />
-                    )}
-                </header>
+                        {
+                            messageList.map((item , index) => {
+                                return <Message key={index} name={item.name} message={item.text} id={index}/>
+                            })
+                        }
+                        {
+                            robotText(messageList.length)
+                        }
+
+                    </div>
+                ) : (
+                    <HelloText hello={name} message={messageList} />
+                )}
+            </header>
         </div>
     );
 }
