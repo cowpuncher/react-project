@@ -1,20 +1,20 @@
 import React from "react";
 import PersonIcon from '@mui/icons-material/Person';
-import { Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 const TopPanel = () => {
     
     const exitSite = () => {
         localStorage.removeItem('login');
-        window.location.assign('/');
+        window.location.reload();
     }
 
     return (
         <div className="topPanel">
-            <Link to="/profile" className="profile">
+            <a href="/profile" className="profile">
                 <PersonIcon />
                 {localStorage.getItem('login')}
-            </Link>
+            </a>
             <button className="exitBtn" onClick={exitSite}>Exit</button>
         </div>       
     )

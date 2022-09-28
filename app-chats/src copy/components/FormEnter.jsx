@@ -13,7 +13,7 @@ const FormEnter = (props) => {
     const enterApp = (e) => {
         setEnter(true);
         localStorage.setItem('login', login);
-        window.location.assign('/');
+        window.location.reload('/');
     }
 
     return (

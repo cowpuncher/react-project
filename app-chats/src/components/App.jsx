@@ -1,19 +1,17 @@
 import './App.css';
-import { Routes, Route } from 'react-router-dom';
 import React, { useState } from 'react';
-import FormEnter from '../components/FormEnter';
-import MainScreen from '../components/MainScreen';
-
-//<div className="App">
-//    { localStorage.getItem('login') ? <MainScreen />  : <FormEnter />  }         
-//</div>
+import { Routes, Route, Link } from 'react-router-dom';
+import MainPage from '../pages/MainPage';
+import ProfilePage from '../pages/ProfilePage';
 
 function App() {
-  return (
-    <div className="App">
-      { localStorage.getItem('login') ? <MainScreen />  : <FormEnter />  }         
-    </div>
-  );
+    return (
+        <Routes>
+            <Route path={'/'} element={<MainPage />} />
+            <Route path={'/profile'} element={<ProfilePage />} />
+            <Route path={"/chat/:chatId"} element={<MainPage />} /> 
+        </Routes>
+    )
 }
 
 export default App;

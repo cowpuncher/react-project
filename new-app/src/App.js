@@ -13,6 +13,7 @@ function App(props) {
     let [elem, setElem] = useState('db');
     let [message, setMessage] = useState('');
     let [messageList, setMessageList] = useState([]);
+    let [messageAdd, setMessageAdd] = useState(false);
     // Переменные
     let newMessage = {};
 
@@ -40,19 +41,20 @@ function App(props) {
                 text: mess
             };
             setMessageList([...messageList, newMessage]);
+            setMessageAdd(true);
         }
         setMessage(message = '');
 
     };
 
     const robotMessage = () => {
-       if(messageList.hasOwnProperty(name)) {
-           
+       if(messageAdd) {
+            setMessageList([...messageList, {
+                title: 'Robot',
+                text: "Thank's"
+            }]);
+            setMessageAdd(false);
        }
-        // setMessageList([...messageList, {
-        //     title: 'Robot',
-        //     text: "Thank's"
-        // }]);
     };
 
     const robotText = (count) => {
