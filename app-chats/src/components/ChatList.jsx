@@ -37,6 +37,7 @@ const ChatList = () => {
         if( nameChats !== '' ) {            
             setLinkChats([...linkChats, nameChats]);
             setAddChats(true);
+            window.location.assign(`/chat/${nameChats}`);
         }
     }
 
@@ -47,12 +48,11 @@ const ChatList = () => {
             if(i == idCurChat){
                 arr.splice(i, 1);
             }
-        }
+        }        
+        window.location.assign(`/`);
         localStorage.setItem('chats', JSON.stringify(arr));
         setLinkChats(arr);
     }
-   
-
    
     useEffect(() => {
         setTimeout(() => {

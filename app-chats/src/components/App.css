@@ -93,6 +93,16 @@ input.inputAddMessage {
 .messageBlock {
   width: 100%;
 }
+.messageList {
+  position: relative;
+}
+p.loading {
+  position: absolute;
+  bottom: -5px;
+  color: #fff;
+  left: 10px;
+  font-size: 9px;
+}
 .mainScreen {
   display: flex;
   justify-content: space-between;
@@ -102,12 +112,28 @@ input.inputAddMessage {
 .messageList {
   height: 94.5%;
   padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: baseline;
 }
 
+p.message {
+  transition: all .3s ease;
+  padding: 10px 15px;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 0.2em;
+  box-shadow: 1px 1px 12px rgb(0 0 0 / 10%);
+}
+.messageList p {
+  margin: 5px 0;
+}
 form.formAddMessage {
   height: 5%;
   padding: 5px;
   position: relative;
+  
 }
 
 button.btnAddMessage {
@@ -226,4 +252,10 @@ button.addChat {
   background: transparent;
   border: 0;
   color: red;
+}
+
+p.robot {
+  color: #7700b1;
+  font-size: 10px;
+  margin: 0;
 }
