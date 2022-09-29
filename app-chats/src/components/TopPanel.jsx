@@ -6,6 +6,7 @@ const TopPanel = () => {
     
     const exitSite = () => {
         localStorage.removeItem('login');
+        localStorage.removeItem('chats');
         window.location.assign('/');
     }
 
